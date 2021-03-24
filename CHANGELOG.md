@@ -1,3 +1,35 @@
+Changelog for ownCloud Android Client [2.18.0] (2021-03-24)
+=======================================
+The following sections list the changes in ownCloud Android Client 2.18.0 relevant to
+ownCloud admins and users.
+
+
+
+Summary
+-------
+
+* Change - Second New feature to implement: [#5678](https://github.com/owncloud/android/issues/5678)
+* Enhancement - New feature to implement: [#1234](https://github.com/owncloud/android/issues/1234)
+
+Details
+-------
+
+* Change - Second New feature to implement: [#5678](https://github.com/owncloud/android/issues/5678)
+
+   The app contains this exciting second feature
+
+   https://github.com/owncloud/android/issues/5678
+   https://github.com/owncloud/android/pull/999999
+   https://doc.owncloud.com/server/admin_manual/configuration/server/config_sample_php_parameters.html
+
+* Enhancement - New feature to implement: [#1234](https://github.com/owncloud/android/issues/1234)
+
+   The app contains this exciting new feature
+
+   https://github.com/owncloud/android/issues/1234
+   https://github.com/owncloud/android/pull/55555
+   https://doc.owncloud.com/server/admin_manual/configuration/server/config_sample_php_parameters.html
+
 ## 2.17 (March 2021)
 - Toolbar redesign
 - Show thumbnails for every supported file type
