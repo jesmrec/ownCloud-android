@@ -1,0 +1,50 @@
+name: unit tests
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      name:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Test launcher'
+        # Default value if no value is explicitly provided
+        default: 'World'
+        # Input has to be provided for the workflow to run
+        required: true
+        # The data type of the input
+        type: string
+
+  push:
+    branches: [ "feature/gh_actions" ]
+
+jobs: 
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gradle cache
+        uses: gradle/gradle-build-action@v2
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: tests
+        run: |
+          ./gradlew owncloudApp:testOriginalDebugUnitTest
+  domain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gradle cache
+        uses: gradle/gradle-build-action@v2
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: tests
+        run: |
+          ./gradlew owncloudDomain:testDebugUnitTest
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gradle cache
+        uses: gradle/gradle-build-action@v2
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: tests
+        run: |
+          ./gradlew owncloudData:testDebugUnitTest
